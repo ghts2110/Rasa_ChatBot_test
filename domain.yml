@@ -1,0 +1,74 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - buy_phone_laptop
+  - ram
+  - cmr
+  - bttry
+  - ask_name
+  - Latest_news_phones_Laptops
+
+entities:
+- category
+- RAM
+- battery
+- camera
+- name
+-
+slots:
+  name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - entity: name
+      type: from_entity
+      conditions:
+      - active_loop: product_stock_form
+    - type: from_entity
+      entity: name
+
+responses:
+  utter_greet:
+    - text: Hello, how can I help you?
+
+  utter_ask_ran:
+    - text: how much GB RAM are you looking for?
+
+  utter_ask_camera:
+    - text: What megapixel camera are you looking for?
+
+  utter_ask_battery:
+    - text: how much battery capacity are you looking for in the mobile?
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: https://i.imgur.com/nGF1K8f.jpg
+
+  utter_did_that_help:
+    - text: Did that help you?
+
+  utter_goodbye:
+    - text: Bye
+
+  utter_iamabot:
+    - text: I am a bot, powered by Rasa.
+
+actions:
+- action_search
+- action_show_latest_news
+- action_name
+
+forms:
+  order_status_form:
+    ignored_intents: []
+    required_slots:
+    - name

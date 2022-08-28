@@ -1,0 +1,52 @@
+version: "3.1"
+
+stories:
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: show_phones
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: buy_phone_laptop
+    entities:
+    - location: "category"
+    - price: "phone"
+  - action: utter_ask_ran
+
+- story: data_phone
+  steps:
+  - action: utter_ask_ran
+  - intent: ram
+  - action: utter_ask_camera
+  - intent: cmr
+  - action: utter_ask_battery
+  - intent: bttry
+  - action: action_search
+
+- story: show_latest_news
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Latest_news_phones_Laptops
+    entities:
+    - location: "catego"
+    - price: "phone"
+  - action: action_show_latest_news

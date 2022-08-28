@@ -1,0 +1,131 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: buy_phone_laptop
+  examples: |
+    - I would like to buy a [phone](category)
+    - I want to buy a [laptop](category)
+    - Please suggest me a good [laptop](category)
+    - I wanted to purchase a [phone](category)
+    - Can you recommend me a [laptop](category)
+    - I wanted to buy a [refrigerator](category)
+    - show me a good [air conditioner](category)
+    - please recommend me a [washing machine](category)
+
+- intent: Latest_news_phones_Laptops
+  examples: |
+    - whats the latest news with [phones](category)
+    - Can you tell me about the trends regarding [phones](category)
+    - whats going on in the tech world for [laptops](category)
+    - can you show me the trends in [laptops](category)
+
+- intent: ram
+  examples: |
+    - I'm looking for [8 GB RAM](RAM)
+    - I would like [10 GB RAM](RAM)
+    - around [16 GB](RAM)
+    - [8 GB](RAM)
+    
+
+- intent: cmr
+  examples: |
+    - I want a front camera of [65 megapixel](camera)
+    - I'm looking for [15 megapixel](camera)
+    - [25 megapixel](camera)
+    - Well around [50 megapixel](camera)
+
+- intent: bttry
+  examples: |
+    - i was looking for [4000 mah](battery) battery backup
+    - [3500 mah](battery)
+    - [4500 mah](battery)
+    - [3200 mah](battery)
+
+- intent: ask_name
+  examples: |
+    - my names is [Gabriel](name)
+    - i am [Gabriel](name)
+    - i'm [Gabriel](name)
+
+- synonym: phone
+  examples: |
+    - mobile
+    - mobiles
+
+- lookup: category
+  examples: |
+    - refrigerator
+    - washing machine
+    - air conditioner
+
+

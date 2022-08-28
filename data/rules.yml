@@ -1,0 +1,21 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: ask name
+  condition:
+    - active_loop: order_status_form
+  steps:
+  - intent: ask_name
+  - action: action_name
+
