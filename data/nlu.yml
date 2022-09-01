@@ -95,7 +95,7 @@ nlu:
     - I would like [10 GB RAM](RAM)
     - around [16 GB](RAM)
     - [8 GB](RAM)
-    
+
 
 - intent: cmr
   examples: |
@@ -127,5 +127,3 @@ nlu:
     - refrigerator
     - washing machine
     - air conditioner
-
-

@@ -18,4 +18,3 @@ rules:
   steps:
   - intent: ask_name
   - action: action_name
-
